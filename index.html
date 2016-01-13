@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Scrolling Nav - A Start Bootstrap Template</title>
+    <title>Film-Portfolio</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -24,6 +24,47 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+
+    <style>
+#playlist {
+    display:table;
+}
+#playlist li{
+    cursor:pointer;
+    padding:8px;
+}
+
+#playlist li:hover{
+    color:blue;
+}
+#videoarea {
+    float:left;
+    width:100%;
+}
+
+li {
+    display: inline;
+}
+</style>
+<script src="js/jquery.js"></script>
+<script>
+$(function() {
+    $("#playlist li").on("click", function() {
+        $("#videoarea").attr({
+            "src": $(this).attr("movieurl"),
+            "poster": "",
+            "autoplay": "autoplay"
+
+        })
+    })
+    $("#videoarea").attr({
+        "src": $("#playlist li").eq(0).attr("movieurl"),
+        "poster": $("#playlist li").eq(0).attr("moviesposter")
+    })
+})
+
+</script>
+
 </head>
 
 <!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
@@ -33,14 +74,17 @@
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
+                <img alt="Titel" src="content/image002.png" class="pull-right">
+                        <h5>Ein Portfolio für Film und Filmsequenzen</h5>
             <div class="navbar-header page-scroll">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Start Bootstrap</a>
+                <a class="navbar-brand page-scroll" href="#page-top">Filme</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -51,13 +95,13 @@
                         <a class="page-scroll" href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#about">About</a>
+                        <a class="page-scroll" href="#about">Ausgewählte Szenen</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#services">Services</a>
+                        <a class="page-scroll" href="#services">Zweiter Film</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
+                        <a class="page-scroll" href="#contact">Dritter Film</a>
                     </li>
                 </ul>
             </div>
@@ -71,9 +115,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>Scrolling Nav</h1>
-                    <p><strong>Usage Instructions:</strong> Make sure to include the <code>scrolling-nav.js</code>, <code>jquery.easing.min.js</code>, and <code>scrolling-nav.css</code> files. To make a link smooth scroll to another section on the page, give the link the <code>.page-scroll</code> class and set the link target to a corresponding ID on the page.</p>
-                    <a class="btn btn-default page-scroll" href="#about">Click Me to Scroll Down!</a>
+                 <h5><strong><p class="text-left"> Der erste Film in ganzer Länge</strong></h5>
+                    <p> <p class="text-left"> Charly Chaplin - The Vagabound</p>
+                    <p><p class="text-left">frei verfügbar</p>
+                    <video id="videoarea" controls="controls" poster="" src="http://distribution.bbb3d.renderfarming.net/video/mp4/bbb_sunflower_1080p_30fps_normal.mp4"></video>
                 </div>
             </div>
         </div>
@@ -84,7 +129,34 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>About Section</h1>
+                    <h3><p class="text-left">Ausgewählte Szenen</h3>
+<!-- Die Knopfleiste gefällt mir, aber leider ohne Funktion. Die funktionierende Liste ist irgendwie zu lang. habe den div jetzt mal in den Kommentar reingenommen
+<div class="btn-group">
+  <li movieurl="content/unterrichtelsterwerdainterviewszenen1.mp4#t=4,219"<button type="button" class="btn btn-default" href="#videoarea" role="button">Über den Einstieg 00:00:04</button></li>
+  <li movieurl="content/unterrichtelsterwerdainterviewszenen1.mp4#t=220,723"<button type="button" class="btn btn-default" href="#videoarea" role="button">Die Rekonstruktion des Filmes 00:03:41</button></li>
+  <li movieurl="content/unterrichtelsterwerdainterviewszenen1.mp4#t=723,730"<button type="button" class="btn btn-default" href="#videoarea" role="button">Die Deutung des Filmes 00:12.03</li>
+</div>
+-->
+
+<!-- Die Funktion der Playlist ist an die Listendarstellung gebunden. Nach ein bisschen googlen habe ich gefunden, dass man im Style den Zeilenumbruch unterdrücken kann mit "li {display: inline;}" Das habe ich oben eingefügt
+du kannst jetzt den ganzen div ab deinem letzten Kommentar löschen -->
+
+<ul id="playlist">
+    <li movieurl="http://distribution.bbb3d.renderfarming.net/video/mp4/bbb_sunflower_1080p_30fps_normal.mp4#t=4,219"><a button type="button" class="btn btn-default" href="#videoarea" role="button">Über den Unterrichtseinstieg 00:00:04</a></li>
+    <li movieurl="http://distribution.bbb3d.renderfarming.net/video/mp4/bbb_sunflower_1080p_30fps_normal.mp4#t=220,723"><a class="btn btn-default" href="#videoarea" role="button">Die Rekonstruktion des Filmes 00:03:41</a></li>
+    <li movieurl="http://distribution.bbb3d.renderfarming.net/video/mp4/bbb_sunflower_1080p_30fps_normal.mp4#t=723,730"><a class="btn btn-default" href="#videoarea" role="button">Die Deutung des Filmes 00:12:03</a></li>
+    <li movieurl="http://distribution.bbb3d.renderfarming.net/video/mp4/bbb_sunflower_1080p_30fps_normal.mp4#t=879,1222"><a class="btn btn-default" href="#videoarea" role="button">Zur Arbeit mit dem Buch 00:14:38</a></li>
+    <li movieurl="http://distribution.bbb3d.renderfarming.net/video/mp4/bbb_sunflower_1080p_30fps_normal.mp4#t=1222,1682"><a class="btn btn-default" href="#videoarea" role="button">Individuelle Förderung 00:20:22</a></li>
+    <li movieurl="http://distribution.bbb3d.renderfarming.net/video/mp4/bbb_sunflower_1080p_30fps_normal.mp4#t=1682,1977"><a class="btn btn-default" href="#videoarea" role="button">Präsentation an der Tafel</a></li>
+    <li movieurl="http://distribution.bbb3d.renderfarming.net/video/mp4/bbb_sunflower_1080p_30fps_normal.mp4#t=1977,3109"><a class="btn btn-default" href="#videoarea" role="button">Reflexion der Komplimente</a></li>
+    <li movieurl="http://distribution.bbb3d.renderfarming.net/video/mp4/bbb_sunflower_1080p_30fps_normal.mp4#t=3109,3125"><a class="btn btn-default" href="#videoarea" role="button">Die Bedeutung eigener Erfahrungen</a></li>
+</ul>
+
+							<p>
+			Video CC BY
+<a href="https://peach.blender.org/about/" target="_blank">Peach open movie project</a>.
+</p>
+
                 </div>
             </div>
         </div>
@@ -95,7 +167,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>Services Section</h1>
+                    <h1>Charlie Chaplin's "The Vagabond"</h1>
+                    <video id="videoarea" controls="controls" poster="" src="https://ia802205.us.archive.org/29/items/CC_1916_07_10_TheVagabond/CC_1916_07_10_TheVagabond.mp4">Your browser does not support HTML5 video.</video>
+
+							<p>
+			Video CC0 - Public Domain
+<a href="https://archive.org/details/CC_1916_07_10_TheVagabond" target="_blank">archive.org</a>.
+</p>
                 </div>
             </div>
         </div>
@@ -106,7 +184,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>Contact Section</h1>
+                    <h1>Begleitvideo zum ZDF-Fernsehfilm "Die Neue"</h1>
+                    <video id="videoarea" controls="controls" poster="" src="http://nrodl.zdf.de/none/zdf/15/10/151015_neue_schulfrieden_final_vj_ps_fdw_436k_p9v11.mp4">
+  						Your browser does not support HTML5 video.</video>
+
+							<p>
+			Video von
+<a href="http://www.zdf.de/ZDFmediathek/beitrag/video/2514302/Schule-und-Religion#/beitrag/video/2514302/Schule-und-Religion">http://www.zdf.de/</a>.
+</p>
                 </div>
             </div>
         </div>
