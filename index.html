@@ -24,6 +24,7 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+<!-- Der folgende <style> ist das Design für die Playlist, mit der die Filmsequenzen angesteuert werden -->
 
     <style>
 #playlist {
@@ -47,6 +48,7 @@ li {
 }
 </style>
 <script src="js/jquery.js"></script>
+<!-- Das folgende <script> steuert die Playlist, mit der die Filmsequenzen angesteuert werden -->
 <script>
 $(function() {
     $("#playlist li").on("click", function() {
@@ -98,10 +100,10 @@ $(function() {
                         <a class="page-scroll" href="#about">Ausgewählte Szenen</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#services">Aufgaben</a>
+                        <a class="page-scroll" href="#services">Zweiter Film</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#contact">Weiterer Film</a>
+                        <a class="page-scroll" href="#contact">Dritter Film</a>
                     </li>
                 </ul>
             </div>
@@ -115,8 +117,7 @@ $(function() {
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                 <h5><strong><p class="text-left"> Der erste Film in ganzer Länge</strong></h5>
-                    <p> <p class="text-left"> Big Buck BUNNY</p>
+                 <h2><p class="text-left">Big Buck BUNNY</h2>
                     <video id="videoarea" controls="controls" poster="" src="http://distribution.bbb3d.renderfarming.net/video/mp4/bbb_sunflower_1080p_30fps_normal.mp4"></video>
                 </div>
             </div>
@@ -128,12 +129,12 @@ $(function() {
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h3><p class="text-left">Ausgewählte Szenen</h3>
+                    <h2><p class="text-left">Ausgewählte Szenen</h2>
 <!-- Die Knopfleiste gefällt mir, aber leider ohne Funktion. Die funktionierende Liste ist irgendwie zu lang. habe den div jetzt mal in den Kommentar reingenommen
 <div class="btn-group">
-  <li movieurl="content/unterrichtelsterwerdainterviewszenen1.mp4#t=4,219"<button type="button" class="btn btn-default" href="#videoarea" role="button">Über den Einstieg 00:00:04</button></li>
-  <li movieurl="content/unterrichtelsterwerdainterviewszenen1.mp4#t=220,723"<button type="button" class="btn btn-default" href="#videoarea" role="button">Die Rekonstruktion des Filmes 00:03:41</button></li>
-  <li movieurl="content/unterrichtelsterwerdainterviewszenen1.mp4#t=723,730"<button type="button" class="btn btn-default" href="#videoarea" role="button">Die Deutung des Filmes 00:12.03</li>
+    <li movieurl="http://distribution.bbb3d.renderfarming.net/video/mp4/bbb_sunflower_1080p_30fps_normal.mp4#t=5,15"><a button type="button" class="btn btn-default" href="#videoarea" role="button">Kameraschwenk 00:00:05</a></li>
+    <li movieurl="http://distribution.bbb3d.renderfarming.net/video/mp4/bbb_sunflower_1080p_30fps_normal.mp4#t=20.1,27.22"><a class="btn btn-default" href="#videoarea" role="button">Der Vogel 00:00:27</a></li>
+    <li movieurl="http://distribution.bbb3d.renderfarming.net/video/mp4/bbb_sunflower_1080p_30fps_normal.mp4#t=30,39"><a class="btn btn-default" href="#videoarea" role="button">Die Höhle 00:00:30</a></li
 </div>
 -->
 
@@ -142,7 +143,7 @@ du kannst jetzt den ganzen div ab deinem letzten Kommentar löschen -->
 
 <ul id="playlist">
     <li movieurl="http://distribution.bbb3d.renderfarming.net/video/mp4/bbb_sunflower_1080p_30fps_normal.mp4#t=5,15"><a button type="button" class="btn btn-default" href="#videoarea" role="button">Kameraschwenk 00:00:05</a></li>
-    <li movieurl="http://distribution.bbb3d.renderfarming.net/video/mp4/bbb_sunflower_1080p_30fps_normal.mp4#t=20,27"><a class="btn btn-default" href="#videoarea" role="button">Der Vogel 00:00:27</a></li>
+    <li movieurl="http://distribution.bbb3d.renderfarming.net/video/mp4/bbb_sunflower_1080p_30fps_normal.mp4#t=20.1,27.22"><a class="btn btn-default" href="#videoarea" role="button">Der Vogel 00:00:27</a></li>
     <li movieurl="http://distribution.bbb3d.renderfarming.net/video/mp4/bbb_sunflower_1080p_30fps_normal.mp4#t=30,39"><a class="btn btn-default" href="#videoarea" role="button">Die Höhle 00:00:30</a></li>
     <li movieurl="http://distribution.bbb3d.renderfarming.net/video/mp4/bbb_sunflower_1080p_30fps_normal.mp4#t=49,59"><a class="btn btn-default" href="#videoarea" role="button">Guten Morgen 00:00:49</a></li>
     <li movieurl="http://distribution.bbb3d.renderfarming.net/video/mp4/bbb_sunflower_1080p_30fps_normal.mp4#t=70,77"><a class="btn btn-default" href="#videoarea" role="button">Blumen 00:01:07</a></li>
@@ -166,27 +167,13 @@ du kannst jetzt den ganzen div ab deinem letzten Kommentar löschen -->
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    <h2>Aufgaben</h2>
-                    <h3> Aufgabe 1: </h3>
-  <h4> Analysiere wichtige Elemente der Narration an dem ausgewählten Filmbeispiel (z. B. Figuren, Konflikt, Handlungsverlauf, Story, Plot, Schlüsselszenen)</h4>
-<p>unterscheide dabei wichtige Einstellungsgrößen und stelle einen Zusammenhang zwischen Einstellungsgröße und Bildaussage her </p>
-  <h3> Aufgabe 2: </h3>
-  <h4>Erläutere die Funktion von Atmo, Geräuschen, Musik und Sprache erläutern </h3>
-<p>beschreibe dabei Bild-Ton-Beziehunge </p>
-=======
                     <h2>Charlie Chaplin's "The Vagabond"</h2>
-=======
-                    <h1>Charlie Chaplin's "The Vagabond"</h1>
->>>>>>> parent of 859405e... Update index.html
                     <video id="videoarea" controls="controls" poster="" src="https://ia802205.us.archive.org/29/items/CC_1916_07_10_TheVagabond/CC_1916_07_10_TheVagabond.mp4">Your browser does not support HTML5 video.</video>
 
 							<p>
 			Video CC0 - Public Domain
 <a href="https://archive.org/details/CC_1916_07_10_TheVagabond" target="_blank">archive.org</a>.
 </p>
->>>>>>> origin/gh-pages
                 </div>
             </div>
         </div>
@@ -197,7 +184,7 @@ du kannst jetzt den ganzen div ab deinem letzten Kommentar löschen -->
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>Begleitvideo zum ZDF-Fernsehfilm "Die Neue"</h1>
+                    <h2>Begleitvideo zum ZDF-Fernsehfilm "Die Neue"</h2>
                     <video id="videoarea" controls="controls" poster="" src="http://nrodl.zdf.de/none/zdf/15/10/151015_neue_schulfrieden_final_vj_ps_fdw_436k_p9v11.mp4">
   						Your browser does not support HTML5 video.</video>
 
