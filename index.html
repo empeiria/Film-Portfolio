@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,6 +26,7 @@
     <![endif]-->
 
 <!-- Der folgende <style> ist das Design für die Playlist, mit der die Filmsequenzen angesteuert werden -->
+<!-- Im Style kann man den Zeilenumbruch in der playlist unterdrücken  mit "li {display: inline;}"  -->
 
     <style>
 #playlist {
@@ -49,6 +51,8 @@ li {
 </style>
 <script src="js/jquery.js"></script>
 <!-- Das folgende <script> steuert die Playlist, mit der die Filmsequenzen angesteuert werden -->
+
+
 <script>
 $(function() {
     $("#playlist li").on("click", function() {
@@ -97,10 +101,10 @@ $(function() {
                         <a class="page-scroll" href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#about">Ausgewählte Szenen</a>
+                        <a class="page-scroll" href="#about">Ausgewählte Sequenzen</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#services">Zweiter Film</a>
+                        <a class="page-scroll" href="#services">Aufgaben</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#contact">Dritter Film</a>
@@ -117,8 +121,8 @@ $(function() {
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                 <h2><p class="text-left">Big Buck BUNNY</h2>
-                    <video id="videoarea" controls="controls" poster="" src="http://distribution.bbb3d.renderfarming.net/video/mp4/bbb_sunflower_1080p_30fps_normal.mp4"></video>
+                 <h2><p class="text-left">Videographie</h2>
+                    <video id="videoarea" controls="controls" poster="" src="medien/videographie.mp4"></video>
                 </div>
             </div>
         </div>
@@ -130,20 +134,12 @@ $(function() {
             <div class="row">
                 <div class="col-lg-12">
                     <h2><p class="text-left">Ausgewählte Szenen</h2>
-<!-- Die Knopfleiste gefällt mir, aber leider ohne Funktion. Die funktionierende Liste ist irgendwie zu lang. habe den div jetzt mal in den Kommentar reingenommen
-<div class="btn-group">
-    <li movieurl="http://distribution.bbb3d.renderfarming.net/video/mp4/bbb_sunflower_1080p_30fps_normal.mp4#t=5,15"><a button type="button" class="btn btn-default" href="#videoarea" role="button">Kameraschwenk 00:00:05</a></li>
-    <li movieurl="http://distribution.bbb3d.renderfarming.net/video/mp4/bbb_sunflower_1080p_30fps_normal.mp4#t=20.1,27.22"><a class="btn btn-default" href="#videoarea" role="button">Der Vogel 00:00:27</a></li>
-    <li movieurl="http://distribution.bbb3d.renderfarming.net/video/mp4/bbb_sunflower_1080p_30fps_normal.mp4#t=30,39"><a class="btn btn-default" href="#videoarea" role="button">Die Höhle 00:00:30</a></li
-</div>
--->
 
-<!-- Die Funktion der Playlist ist an die Listendarstellung gebunden. Nach ein bisschen googlen habe ich gefunden, dass man im Style den Zeilenumbruch unterdrücken kann mit "li {display: inline;}" Das habe ich oben eingefügt
-du kannst jetzt den ganzen div ab deinem letzten Kommentar löschen -->
+
 
 <ul id="playlist">
-    <li movieurl="http://distribution.bbb3d.renderfarming.net/video/mp4/bbb_sunflower_1080p_30fps_normal.mp4#t=5,15"><a button type="button" class="btn btn-default" href="#videoarea" role="button">Kameraschwenk 00:00:05</a></li>
-    <li movieurl="http://distribution.bbb3d.renderfarming.net/video/mp4/bbb_sunflower_1080p_30fps_normal.mp4#t=20.1,27.22"><a class="btn btn-default" href="#videoarea" role="button">Der Vogel 00:00:27</a></li>
+    <li movieurl="medien/videographie.mp4#t=0,3"><a button type="button" class="btn btn-default" href="#videoarea" role="button">Begrüssung 00:00:05 </a></li>
+    <li movieurl="medien/videographie.mp4#t=20.1,27.22"><a class="btn btn-default" href="#videoarea" role="button">Der Vogel 00:00:27</a></li>
     <li movieurl="http://distribution.bbb3d.renderfarming.net/video/mp4/bbb_sunflower_1080p_30fps_normal.mp4#t=30,39"><a class="btn btn-default" href="#videoarea" role="button">Die Höhle 00:00:30</a></li>
     <li movieurl="http://distribution.bbb3d.renderfarming.net/video/mp4/bbb_sunflower_1080p_30fps_normal.mp4#t=49,59"><a class="btn btn-default" href="#videoarea" role="button">Guten Morgen 00:00:49</a></li>
     <li movieurl="http://distribution.bbb3d.renderfarming.net/video/mp4/bbb_sunflower_1080p_30fps_normal.mp4#t=70,77"><a class="btn btn-default" href="#videoarea" role="button">Blumen 00:01:07</a></li>
